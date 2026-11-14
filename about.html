@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сайт про Ксю</title>
+    <title>История о Ксю</title>
     <link rel="icon" href="images/logo.png" type="image/png">
     <style>
-    	body {
-    		background-color: rgb(242, 221, 198);
-    	}
+        body {
+            background-color: rgb(242, 221, 198);
+            margin: 0;
+            font-family: 'Courier New', monospace;
+        }
 
         .header {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -26,37 +29,35 @@
             gap: 20px;
             margin: 0;
             padding: 0;
-            font-size: 30px;
+            font-size: 24px;
         }
 
         .menu a {
-            position: relative; 
+            position: relative;
             display: inline-block;
             text-decoration: none;
             color: white;
-            font-family: 'Courier New', monospace;
             font-weight: 500;
             padding: 8px 16px;
-            transition: all 0.4s ease; 
+            transition: all 0.4s ease;
             border-radius: 30px;
             background: black;
         }
 
-        .menu a:hover { 
-            color: rgb(242, 221, 198); 
+        .menu a:hover {
+            color: rgb(242, 221, 198);
         }
 
         .menu a::after {
-    		content: "";
-    		position: absolute;
-    		left: 16px;
-    		bottom: 6px;
-    		width: 0;                  
-    		height: 2px;              
-    		background-color: rgb(242, 221, 198); 
-    		transition: width 0.3s ease;
-		}
-
+            content: "";
+            position: absolute;
+            left: 16px;
+            bottom: 6px;
+            width: 0;
+            height: 2px;
+            background-color: rgb(242, 221, 198);
+            transition: width 0.3s ease;
+        }
 
         .menu a:hover::after {
             width: calc(100% - 32px);
@@ -69,50 +70,110 @@
             border-radius: 30px;
         }
 
-        .ras {
-            margin: 15px 30px;
-            padding: 15px 30px;
-            flex: 1;
-            font-size: 20px;
-            background-color: #fffaf3;
-            padding: 25px;
-            border-radius: 25px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        .story-container {
+            max-width: 1000px;
+            margin: 0 auto 50px auto;
+            padding: 0 20px;
         }
 
         h1 {
-            margin: 15px 30px;
-            padding: 15px 30px;
+            margin: 0 0 25px 0;
+            padding: 20px 30px;
             background-color: white;
-            border-radius: 35px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            font-size: 32px;
+        }
+
+        .ras {
+            margin: 0;
+            font-size: 20px;
+            line-height: 1.6;
+            background-color: #fffaf3;
+            padding: 30px;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .site-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            border-radius: 30px;
+            margin: 35px 20px;
+            padding: 15px 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         .footer {
             display: flex;
-            justify-content: space-between;
             list-style: none;
             gap: 25px;
-            margin: 15px 30px;
-            padding: 15px 30px;
-            font-size: 24px;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
         }
 
         .footer a {
-            text-decoration: none;              /* Убирает подчеркивание у ссылок */
-            color: black;                       /* Меняет стандартный синий цвет на черный */
-            font-family: 'Courier New', monospace;
+            text-decoration: none;
+            color: black;
             transition: opacity 0.3s ease;
         }
 
         .footer a:hover {
-            opacity: 0.6; 
+            opacity: 0.6;
         }
 
-        .footer p {
-
+        .copyright {
+            margin: 0;
+            font-size: 16px;
+            color: #555555;
         }
 
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 15px;
+                margin: 15px 10px;
+                padding: 15px;
+            }
+
+            .menu {
+                font-size: 18px;
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .story-container {
+                padding: 0 10px;
+                margin-bottom: 25px;
+            }
+
+            h1 {
+                font-size: 24px;
+                padding: 18px 20px;
+            }
+
+            .ras {
+                font-size: 18px;
+                padding: 20px;
+            }
+
+            .site-footer {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+                margin: 20px 10px;
+                padding: 20px;
+            }
+
+            .footer {
+                justify-content: center;
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -122,24 +183,25 @@
         </div>
         <nav>
             <ul class="menu">
-                <li><a href="about.html">История про Ксю</a></li>
+                <li><a href="about.html">История о Ксю</a></li>
                 <li><a href="index.html">Главная</a></li>
             </ul>
         </nav>
     </header>
-    <h1>История обо мне, мур-мур.</h1>
-    <div>
+
+    <main class="story-container">
+        <h1>История обо мне, мур-мур.</h1>
         <p class="ras">
             Однажды я бежала по окну, виднелся из окна свет луны. Я подошла к углу. Там лежала мышка. Она укрывалась листом бумаги, чтобы укрыться от холода. А я хотела кушать и укусила ее. Убила. Я посмотрела в окошко и поняла, что натворила. Я испугалась, отошла. Вдруг моя хозяйка зашла. Она спросила: "Ксю, что ты шумишь?". Я заплакала тогда, а она: "Ксюша, успокойся, все хорошо, я люблю тебя, ты хорошая. Вижу, что мышь ты убила — это беда, но ты ее поняла и это прекрасно." Она обняла меня и с тех пор я не убиваю никого. Спасибо за чтение.
         </p>
-    </div>
+    </main>
 
-    <footer>
+    <footer class="site-footer">
         <ul class="footer">
             <li><a href="index.html">Главная</a></li>
             <li><a href="about.html">История о Ксю</a></li>
         </ul>
-        <center><p class="copyright">&copy; 2026 Сайт Ксюньки. Все права защищены лапками.</p></center>
+        <p class="copyright">&copy; 2026 Сайт Ксюньки. Все права защищены лапками.</p>
     </footer>
 </body>
 </html>

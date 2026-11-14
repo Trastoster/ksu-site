@@ -6,12 +6,14 @@
     <title>Сайт про Ксю</title>
     <link rel="icon" href="images/logo.png" type="image/png">
     <style>
-    	body {
-    		background-color: rgb(242, 221, 198);
-    	}
+        body {
+            background-color: rgb(242, 221, 198);
+            margin: 0;
+            font-family: 'Courier New', monospace;
+        }
 
         .header {
-        	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -27,37 +29,35 @@
             gap: 20px;
             margin: 0;
             padding: 0;
-            font-size: 30px;
+            font-size: 24px;
         }
 
         .menu a {
-            position: relative; 
+            position: relative;
             display: inline-block;
             text-decoration: none;
             color: white;
-            font-family: 'Courier New', monospace;
             font-weight: 500;
             padding: 8px 16px;
-            transition: all 0.4s ease; 
+            transition: all 0.4s ease;
             border-radius: 30px;
             background: black;
         }
 
-        .menu a:hover { 
-            color: rgb(242, 221, 198); 
+        .menu a:hover {
+            color: rgb(242, 221, 198);
         }
 
         .menu a::after {
-    		content: "";
-    		position: absolute;
-    		left: 16px;
-    		bottom: 6px;
-    		width: 0;                  
-    		height: 2px;              
-    		background-color: rgb(242, 221, 198); 
-    		transition: width 0.3s ease;
-		}
-
+            content: "";
+            position: absolute;
+            left: 16px;
+            bottom: 6px;
+            width: 0;
+            height: 2px;
+            background-color: rgb(242, 221, 198);
+            transition: width 0.3s ease;
+        }
 
         .menu a:hover::after {
             width: calc(100% - 32px);
@@ -71,101 +71,166 @@
         }
 
         .container {
-        	font-size: 16px;
-        	color: black;
-        	display: block;
-        }
-
-        .ksu {
-        	height: 300px;
-        	width: auto;
-        	display: block;
-        	border-radius: 12px;
+            max-width: 1000px;
+            margin: 0 auto 50px auto;
+            padding: 0 20px;
+            color: black;
         }
 
         .hero-card {
-        	display: flex;
-        	align-items: center;
-        	gap: 40px;
-        	background-color: #fffaf3;
-        	padding: 40px;
-        	box-shadow: 0 4px 15 px rgba(0, 0, 0, 1.0);
-        	border-radius: 30px;
-        	margin: 35px 20px;
-        	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-        	margin: 35px 20px;
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            background-color: white;
+            padding: 35px;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .ksu {
+            height: 220px;
+            width: 220px;
+            object-fit: cover;
+            display: block;
+            border-radius: 25px;
+            border: 4px solid rgb(242, 221, 198);
         }
 
         .hero-text h1 {
-        	margin-top: 0;
-        	font-size: 34px;
-        	color: #111111;
+            margin-top: 0;
+            font-size: 32px;
         }
 
         .hero-text p {
-        	font-size: 18px;
-        	line-height: 1.6;
-        	color: #333333;
+            font-size: 18px;
+            line-height: 1.5;
         }
 
         .tag {
-        	display: inline-block;
-        	margin-top: 10px;
-        	background-color: black;
-        	color: rgb(242, 221, 198);
-        	padding: 9px 18 px;
-        	border-radius: 30 px;
-        	font-size: 19px;
+            display: inline-block;
+            margin-top: 10px;
+            background-color: black;
+            color: rgb(242, 221, 198);
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
         }
 
         .facts {
-        	display: flex;
-        	gap: 30px;
-        	margin: 35px 20px;
+            display: flex;
+            gap: 20px;
+            margin-top: 25px;
         }
 
         .fact-card {
-        	flex: 1;
-        	background-color: #fffaf3;
-        	padding: 25px;
-        	border-radius: 25px;
-        	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-        }
-
-        .fact-card h2 {
-        	margin-top: 0;
-        	font-size: 32px;
-        	color: black;
+            flex: 1;
+            background-color: white;
+            padding: 25px 30px;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         }
 
         .fact-card h3 {
-        	font-size: 17px;
-        	line-height: 1.6;
-        	color: #333333;
-        	margin-bottom: 0;
+            margin-top: 0;
+            font-size: 22px;
         }
 
-                .footer {
+        .fact-card p {
+            font-size: 17px;
+            margin-bottom: 0;
+            line-height: 1.4;
+        }
+
+        .site-footer {
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            border-radius: 30px;
+            margin: 35px 20px;
+            padding: 15px 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer {
+            display: flex;
             list-style: none;
             gap: 25px;
-            margin: 15px 30px;
-            padding: 15px 30px;
-            font-size: 24px;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
         }
 
         .footer a {
-            text-decoration: none;            
-            color: black;                       
-            font-family: 'Courier New', monospace;
+            text-decoration: none;
+            color: black;
             transition: opacity 0.3s ease;
         }
 
         .footer a:hover {
-            font-size: 25px; 
+            opacity: 0.6;
         }
 
+        .copyright {
+            margin: 0;
+            font-size: 16px;
+            color: #555555;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 15px;
+                margin: 15px 10px;
+                padding: 15px;
+            }
+
+            .menu {
+                font-size: 18px;
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .container {
+                padding: 0 10px;
+                margin-bottom: 25px;
+            }
+
+            .hero-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 25px 20px;
+                gap: 20px;
+            }
+
+            .ksu {
+                width: 180px;
+                height: 180px;
+            }
+
+            .hero-text h1 {
+                font-size: 26px;
+            }
+
+            .facts {
+                flex-direction: column;
+            }
+
+            .site-footer {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+                margin: 20px 10px;
+                padding: 20px;
+            }
+
+            .footer {
+                justify-content: center;
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -175,40 +240,42 @@
         </div>
         <nav>
             <ul class="menu">
-                <li><a href="about.html">История про Ксю</a></li>
+                <li><a href="about.html">История о Ксю</a></li>
                 <li><a href="index.html">Главная</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="container">
-    	<section class="hero-card">
-    		<div class="hero-photo">
-    			<img src="images/ksu0.png" alt="Ксю" class="ksu"> 
-    		</div>
-    		<div class="hero-text">
-    			<h1>Мурлык, я Ксюнька</h1>
-    			<p>Я очень люблю спать на батарее и кушаньки делать!</p>
-    			<span class="tag">Главная по спячке</span>
-    		</div>
-    	</section>
+        <section class="hero-card">
+            <div class="hero-photo">
+                <img src="images/logo.png" alt="Ксю" class="ksu">
+            </div>
+            <div class="hero-text">
+                <h1>Мурлык, я Ксюнька</h1>
+                <p>Я очень люблю спать на батарее и кушаньки делать!</p>
+                <span class="tag">Главная по спячке</span>
+            </div>
+        </section>
 
-    	<section class="facts">
-    		<div class="fact-card">
-    			<h2>Характер</h2>
-    			<h3>Мурлычка, уютная, любопытная и игривая</h3>
-    		</div>
-    		<div class="fact-card">
-    			<h2>Любимое занятие</h2>
-    			<h3>Спать на батарее</h3>
-    		</div>
-    	</section>
+        <section class="facts">
+            <div class="fact-card">
+                <h3>Характер</h3>
+                <p>Мурлычка, уютная, любопытная и игривая</p>
+            </div>
+            <div class="fact-card">
+                <h3>Любимое занятие</h3>
+                <p>Спать на батарее</p>
+            </div>
+        </section>
     </main>
-    <footer>
-    <ul class="footer">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="about.html">История о Ксю</a></li>
-    </ul>
-    <center><p class="copyright">&copy; 2026 Сайт Ксюньки. Все права защищены лапками.</p></center>
+
+    <footer class="site-footer">
+        <ul class="footer">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">История о Ксю</a></li>
+        </ul>
+        <p class="copyright">&copy; 2026 Сайт Ксюньки. Все права защищены лапками.</p>
+    </footer>
 </body>
 </html>
