@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт про Ксю</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <style>
+    	body {
+    		background-color: rgb(242, 221, 198);
+    	}
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: white;
+            border-radius: 30px;
+            margin: 35px 20px;
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+            font-size: 30px;
+        }
+
+        .menu a {
+            position: relative; 
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            font-family: 'Courier New', monospace;
+            font-weight: 500;
+            padding: 8px 16px;
+            transition: all 0.4s ease; 
+            border-radius: 30px;
+            background: black;
+        }
+
+        .menu a:hover { 
+            color: rgb(242, 221, 198); 
+        }
+
+        .menu a::after {
+    		content: "";
+    		position: absolute;
+    		left: 16px;
+    		bottom: 6px;
+    		width: 0;                  
+    		height: 2px;              
+    		background-color: rgb(242, 221, 198); 
+    		transition: width 0.3s ease;
+		}
+
+
+        .menu a:hover::after {
+            width: calc(100% - 32px);
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            display: block;
+            border-radius: 30px;
+        }
+
+        .ras {
+            margin: 15px 30px;
+            padding: 15px 30px;
+            flex: 1;
+            font-size: 20px;
+            background-color: #fffaf3;
+            padding: 25px;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            margin: 15px 30px;
+            padding: 15px 30px;
+            background-color: white;
+            border-radius: 35px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            gap: 25px;
+            margin: 15px 30px;
+            padding: 15px 30px;
+            font-size: 24px;
+        }
+
+        .footer a {
+            text-decoration: none;              /* Убирает подчеркивание у ссылок */
+            color: black;                       /* Меняет стандартный синий цвет на черный */
+            font-family: 'Courier New', monospace;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer a:hover {
+            opacity: 0.6; 
+        }
+
+        .footer p {
+
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="Логотип"></a>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="about.html">История про Ксю</a></li>
+                <li><a href="index.html">Главная</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>История обо мне, мур-мур.</h1>
+    <div>
+        <p class="ras">
+            Однажды я бежала по окну, виднелся из окна свет луны. Я подошла к углу. Там лежала мышка. Она укрывалась листом бумаги, чтобы укрыться от холода. А я хотела кушать и укусила ее. Убила. Я посмотрела в окошко и поняла, что натворила. Я испугалась, отошла. Вдруг моя хозяйка зашла. Она спросила: "Ксю, что ты шумишь?". Я заплакала тогда, а она: "Ксюша, успокойся, все хорошо, я люблю тебя, ты хорошая. Вижу, что мышь ты убила — это беда, но ты ее поняла и это прекрасно." Она обняла меня и с тех пор я не убиваю никого. Спасибо за чтение.
+        </p>
+    </div>
+
+    <footer>
+        <ul class="footer">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">История о Ксю</a></li>
+        </ul>
+        <center><p class="copyright">&copy; 2026 Сайт Ксюньки. Все права защищены лапками.</p></center>
+    </footer>
+</body>
+</html>
